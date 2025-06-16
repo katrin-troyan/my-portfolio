@@ -1,5 +1,5 @@
 import { FaLinkedin, FaGithub,  FaTelegramPlane } from 'react-icons/fa';
-
+import fotoPortfolio from '../../assets/myfoto.png';
 import css from './Hero.module.scss';
 
 const Hero = () => {
@@ -36,7 +36,7 @@ const Hero = () => {
         <a href="#about">
         <img
           className={css.image}
-          src="/src/assets/myfoto.png"
+          src={fotoPortfolio}
           alt="Troyan Katerina"
           width="476"
           height="506"
