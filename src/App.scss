@@ -1,0 +1,17 @@
+#root {
+  --container-max-width: 1440px;
+  --container-padding-mobile: 16px;
+  --container-padding-desktop: 80px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding-mobile);
+ 
+
+  @media (min-width: 760px) {
+    padding: 0 var(--container-padding-desktop);
+  }
+}
