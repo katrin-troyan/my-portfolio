@@ -39,10 +39,14 @@
   width: 288px;
   background: rgba(255, 255, 255, 0.08);
   opacity: 0.9;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   @media (min-width: 1300px) {
     width: 648px;
     padding: 16px 40px;
   }
+}
+.aboutItem:hover {
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.7);
 }
 .aboutSubtitle {
   text-align: left;
@@ -66,6 +70,7 @@
     font-size: 32px;
   }
 }
+
 .aboutText {
   font-weight: 500;
   line-height: 160%;
@@ -78,6 +83,7 @@
   @media (min-width: 1300px) {
     display: block;
     border-radius: 261px 261px 12px 12px;
+    max-width: 100%;
     width: 523px;
     height: 676px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
