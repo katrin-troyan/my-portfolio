@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
-    @media (min-width: 760px){
+    @media (min-width: 1300px){
         flex-direction: row;
         gap:16px;
         justify-content: space-between;
@@ -14,12 +14,12 @@
 }
 .quoteImage{
     display: none;
-    @media (min-width: 760px) {
+    @media (min-width: 1300px) {
         display: block;
     }
 }
 .img{
-     @media (min-width: 760px) {
+     @media (min-width: 1300px) {
         border-radius: 24px;
         width: 628px;
         height: 618px;
@@ -29,7 +29,7 @@
     border-radius: 24px;
     width: 288px;
     background: #fd6f00;
-    @media (min-width: 760px){
+    @media (min-width: 1300px){
         width: 628px;
         height: 618px;
     }
@@ -44,7 +44,7 @@
     text-align: center;
     color: var(--text-white);
     padding: 34px 17px;
-    @media (min-width: 760px){              
+    @media (min-width: 1300px){              
         font-size: 50px;
         line-height: 140%;
         text-align: left;

@@ -1,5 +1,6 @@
 import Hero from "./components/Hero/Hero";
 import Quote from "./components/Quote/Quote";
+import About from "./components/About/About";
 import "./App.scss";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="container">
       <Hero />
       <Quote />
+      <About />
     </div>
   );
 }
