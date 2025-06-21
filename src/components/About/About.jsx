@@ -1,49 +1,72 @@
-import css from './About.module.css';
+import { useState } from "react";
+import comp from "../../assets/comp.png";
+import css from "./About.module.scss";
 
 const About = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
     <section id="about" className={css.about}>
+      <h2 className={css.aboutTitle}>About Me</h2>
       <div className={css.aboutWrapper}>
-        <ul className={css.aboutList}>
-          <li className={css.aboutItem}>
-            <h3 className={css.aboutTitle}>About Me</h3>
-            <p className={css.aboutText}>
-            I'm Kateryna Troyan, and I'm passionate about creating fast, responsive, and user-friendly web applications.
-            I work with HTML, CSS, JavaScript, and React, specialising in developing interactive and visually appealing interfaces that improve user experience and help achieve business goals. I always adhere to the principles of clean code, attention to detail, and result orientation.
-            I have experience working in team projects, where I actively contribute to the discussion of ideas, joint problem solving, and support of colleagues. 
-            I help companies strengthen their online reputation with high-quality, user-friendly, and technologically advanced web solutions.
-            </p>
-          </li>
-          <li className={css.aboutItem}>
-            <h3 className={css.aboutTitle}>Soft Skills</h3>
-            <p className={css.aboutText}>
-            Teamwork<br />
-            Communicative <br />
-            Meeting deadlines <br />
-            Responsibility<br />
-            </p>
-          </li>
-          <li className={css.aboutItem}>
-            <h3 className={css.aboutTitle}>Education</h3>
-            <p className={css.aboutText}>
-            2024-2025 IT School GoIT<br />
-            Fullstack Developer<br />
-            2002-2007 National University of <br />
-            Life and Environmental Sciences of <br/> Ukraine Master's degree Breeding and Genetics
-            </p>
-            </li>
-        </ul>
+        <div className={css.accordion}>
+          <ul className={css.aboutList}>
+            {[
+              {
+                title: "About Me",
+                content: `I'm Kateryna Troyan, and I'm passionate about creating fast, responsive, and user-friendly web applications. I work with HTML, CSS, JavaScript, and React, specialising in developing interactive and visually appealing interfaces...`,
+              },
+              {
+                title: "Soft Skills",
+                content: `Teamwork\nCommunicative\nMeeting deadlines\nResponsibility`,
+              },
+              {
+                title: "Education",
+                content: `2024-2025 IT School GoIT\nFullstack Developer\n2002-2007 National University of Life and Environmental Sciences of Ukraine, Master's degree`,
+              },
+            ].map((item, index) => (
+              <li className={css.aboutItem} key={index}>
+                <h3 className={css.aboutSubtitle}>
+                  <button
+                    type="button"
+                    className={css.aboutBtn}
+                    onClick={() => toggleAccordion(index)}
+                  >
+                    {item.title}
+                  </button>
+                </h3>
+                {openIndex === index && (
+                  <p className={css.aboutText}>
+                    {item.content.split("\n").map((line, i) => (
+                      <span key={i}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={css.aboutImg}>
+          <img className={css.img} src={comp} alt="computer" />
+        </div>
       </div>
       <div className={css.btnDownload}>
         <a
-            className={`${css.cv} ${css.baseBtn}`}
-            href="https://drive.google.com/file/d/1QGVp3iAFxVCqPWwWC02b-9_kNRNPjUFR/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
+          className={`${css.cv} ${css.baseBtn}`}
+          href="https://drive.google.com/file/d/1QGVp3iAFxVCqPWwWC02b-9_kNRNPjUFR/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-        Download CV
+          Download CV
         </a>
-        </div>
+      </div>
     </section>
   );
 };
