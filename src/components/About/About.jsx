@@ -18,15 +18,21 @@ const About = () => {
             {[
               {
                 title: "About Me",
-                content: `I'm Kateryna Troyan, and I'm passionate about creating fast, responsive, and user-friendly web applications. I work with HTML, CSS, JavaScript, and React, specialising in developing interactive and visually appealing interfaces...`,
+                content: `I'm Kateryna Troyan, and I'm passionate about creating fast, responsive, and user-friendly web applications.
+                I work with HTML, CSS, JavaScript, React, specialising in developing interactive and visually appealing interfaces that improve user experience and help achieve business goals. I always adhere to the principles of clean code, attention to detail, and result orientation.
+                I help companies strengthen their online reputation with high-quality, user-friendly, and technologically advanced web solutions.`,
               },
               {
                 title: "Soft Skills",
-                content: `Teamwork\nCommunicative\nMeeting deadlines\nResponsibility`,
+                content: `Teamwork<br/>Communicative<br/>Meeting deadlines<br/>Responsibility`,
+              },
+              {
+                title: "Goals",
+                content: `Develop as a Frontend developer<br/>Participate in cool projects<br/>Create user-friendly interfaces for people`,
               },
               {
                 title: "Education",
-                content: `2024-2025 IT School GoIT\nFullstack Developer\n2002-2007 National University of Life and Environmental Sciences of Ukraine, Master's degree`,
+                content: `2024-2025 IT School GoIT<br/>Fullstack Developer<br/>2002-2007 National University of Life and Environmental Sciences of Ukraine, Master's degree`,
               },
             ].map((item, index) => (
               <li className={css.aboutItem} key={index}>
@@ -41,7 +47,7 @@ const About = () => {
                 </h3>
                 {openIndex === index && (
                   <p className={css.aboutText}>
-                    {item.content.split("\n").map((line, i) => (
+                    {item.content.split("<br/>").map((line, i) => (
                       <span key={i}>
                         {line}
                         <br />

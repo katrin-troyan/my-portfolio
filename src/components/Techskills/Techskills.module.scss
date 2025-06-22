@@ -1,0 +1,46 @@
+.techskills {
+    overflow: hidden;
+    margin-bottom: 50px;
+    @media (min-width: 1300px) {
+        margin-bottom: 100px;
+    }
+}
+
+.slider {
+    width: 288px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    @media (min-width: 1300px){
+        width: 1278px;
+    }
+}
+
+.slideTrack {
+    display: flex;
+    width: calc(100px * 18); 
+    animation: scroll 10s linear infinite;
+    @media (min-width: 1300px) {
+        width: calc(150px * 18);
+        animation: scroll 15s linear infinite;
+    }
+}
+
+.slide {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #f8f8f8;
+   
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    } }
