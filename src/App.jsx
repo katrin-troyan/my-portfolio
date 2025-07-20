@@ -3,6 +3,8 @@ import Quote from "./components/Quote/Quote";
 import About from "./components/About/About";
 import Techskills from "./components/Techskills/Techskills";
 import Benefits from "./components/Benefits/Benefits";
+import Projects from "./components/Projects/Projects"
+
 import "./App.scss";
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
       <About />
       <Techskills />
       <Benefits />
+      <Projects />
     </div>
   );
 }

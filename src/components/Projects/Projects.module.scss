@@ -1,0 +1,158 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+
+  @media (min-width: 1300px) {
+    margin-bottom: 80px;
+  }
+}
+.projectTitle {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.projectWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.projectList {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1300px) {
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+.projectItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projectTitleWrapper {
+  position: relative;
+  overflow: hidden;
+}
+.projectImg {
+  border-radius: 28px 28px 0 0;
+  width: 288px;
+  height: 430px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0);
+  @media (min-width: 1300px) {
+    width: 415px;
+    height: 584px;
+  }
+}
+.descriptionOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 430px;
+  padding: 0 20px;
+
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    161deg,
+    rgba(253, 111, 0, 0.6) 0%,
+    rgba(8, 2, 21, 0.7) 100%
+  );
+  border-radius: 28px 28px 0 0;
+  transform: translatey(100%);
+  transition: 300ms ease-in;
+  transition-property: transform;
+  @media (min-width: 1300px) {
+    height: 584px;
+  }
+}
+.projectItem:hover .descriptionOverlay {
+  transform: translatey(0);
+}
+.descriptionTitle {
+  font-size: 20px;
+  @media (min-width: 1300px) {
+    font-size: 32px;
+  }
+}
+.descriptionText {
+  line-height: 190%;
+  text-align: center;
+}
+.projectBtnWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  border-radius: 0 0 16px 16px;
+  padding: 12px 10px;
+  width: 288px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 20px;
+  @media (min-width: 1300px) {
+    padding: 16px;
+    width: 415px;
+    height: 80px;
+  }
+}
+.projectIcon {
+  width: 18px;
+  height: 18px;
+  @media (min-width: 1300px) {
+    width: 24px;
+    height: 24px;
+  }
+}
+.projectButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 8px;
+  width: 134px;
+  height: 38px;
+  background: linear-gradient(129deg, #fd6f00 0%, #e46400 100%);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  @media (min-width: 1300px) {
+    font-size: 20px;
+    width: 182px;
+    height: 48px;
+  }
+}
+.arrowWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.arrowButton {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.iconBtn {
+  width: 40px;
+  height: 40px;
+  color: #e46400;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
