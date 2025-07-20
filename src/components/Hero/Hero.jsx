@@ -36,7 +36,7 @@ const Hero = () => {
           </a>
         </div>
         <div className={css.description}>
-          <button className={`${css.button} ${css.baseBtn}`}>Hire Me</button>
+          <a href="#contact" className={`${css.button} ${css.baseBtn}`}>Hire Me</a>
           <a
             className={`${css.cv} ${css.baseBtn}`}
             href="https://drive.google.com/file/d/1QGVp3iAFxVCqPWwWC02b-9_kNRNPjUFR/view?usp=drive_link"
