@@ -38,7 +38,7 @@ const Contact = () => {
       {isModalOpen && (
         <div className={css.modalOverlay} onClick={() => setIsModalOpen(false)}>
           <div className={css.modal} onClick={(e) => e.stopPropagation()}>
-            <h3>Thank you for your interest in cooperation!</h3>
+            <h3 className={css.modalTitle}>Thank you for your interest in cooperation!</h3>
             <p className={css.modalText}>
               I will be in touch with you shortly to discuss further details and
               opportunities for cooperation. Please stay in touch.
