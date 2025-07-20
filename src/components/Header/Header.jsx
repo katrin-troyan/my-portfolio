@@ -1,14 +1,24 @@
 import Logo from "../../assets/logon.png";
 import { IoMdList } from "react-icons/io";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import css from "./Header.module.scss";
 
 const Header = () => {
-const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language || "ua";
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <header className={css.header}>
-      <IoMdList className={css.menuIcon} onClick={() => setIsModalOpen(prev => !prev)}  />
+      <IoMdList
+        className={css.menuIcon}
+        onClick={() => setIsModalOpen((prev) => !prev)}
+      />
       <div className={css.logo}>
         <a href="#about">
           <img
@@ -20,39 +30,71 @@ const [isModalOpen, setIsModalOpen] = useState(false);
           />
         </a>
       </div>
-      <nav className={css.nav}>
+     <nav className={css.nav}>
         <ul className={css.navList}>
           <li className={css.navItem}>
-            <a href="#home">Home</a>
+            <a href="#home">{t("nav_home")}</a>
           </li>
           <li className={css.navItem}>
-            <a href="#about">About me</a>
+            <a href="#about">{t("nav_about")}</a>
           </li>
           <li className={css.navItem}>
-            <a href="#benefist">Benefist</a>
+            <a href="#benefist">{t("nav_benefits")}</a>
           </li>
           <li className={css.navItem}>
-            <a href="#project">Projects</a>
+            <a href="#project">{t("nav_projects")}</a>
           </li>
           <li className={css.navItem}>
-            <a href="#contact">Contact me</a>
+            <a href="#contact">{t("nav_contact")}</a>
           </li>
         </ul>
       </nav>
-      <a href="#contact" className={css.baseBtn}>
-        Hire Me
-          </a>
-          {isModalOpen && (
-  <div className={css.modalNav}>
-    <ul className={css.modalNavList}>
-      <li className={css.modalNavItem}><a href="#home" onClick={() => setIsModalOpen(false)}>Home</a></li>
-      <li className={css.modalNavItem}><a href="#about" onClick={() => setIsModalOpen(false)}>About me</a></li>
-      <li className={css.modalNavItem}><a href="#benefist" onClick={() => setIsModalOpen(false)}>Benefist</a></li>
-      <li className={css.modalNavItem}><a href="#project" onClick={() => setIsModalOpen(false)}>Projects</a></li>
-      <li className={css.modalNavItem}><a href="#contact" onClick={() => setIsModalOpen(false)}>Contact me</a></li>
-    </ul>
-  </div>
-)}
+      <div>
+  <button
+    className={`${css.languageBtn} ${currentLang === "ua" ? css.active : ""}`}
+    onClick={() => changeLanguage("ua")}
+  >
+    UA
+  </button>
+  <button
+    className={`${css.languageBtn} ${currentLang === "en" ? css.active : ""}`}
+    onClick={() => changeLanguage("en")}
+  >
+    EN
+  </button>
+</div>
+
+      {isModalOpen && (
+        <div className={css.modalNav}>
+          <ul className={css.modalNavList}>
+            <li className={css.modalNavItem}>
+              <a href="#home" onClick={() => setIsModalOpen(false)}>
+                {t("nav_home")}
+              </a>
+            </li>
+            <li className={css.modalNavItem}>
+              <a href="#about" onClick={() => setIsModalOpen(false)}>
+                {t("nav_about")}
+              </a>
+            </li>
+            <li className={css.modalNavItem}>
+              <a href="#benefist" onClick={() => setIsModalOpen(false)}>
+                {t("nav_benefits")}
+              </a>
+            </li>
+            <li className={css.modalNavItem}>
+              <a href="#project" onClick={() => setIsModalOpen(false)}>
+                {t("nav_projects")}
+              </a>
+            </li>
+            <li className={css.modalNavItem}>
+              <a href="#contact" onClick={() => setIsModalOpen(false)}>
+                {t("nav_contact")}
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </header>
   );
 };

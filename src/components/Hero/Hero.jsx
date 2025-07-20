@@ -1,14 +1,17 @@
 import { FaLinkedin, FaGithub, FaTelegramPlane } from "react-icons/fa";
 import fotoPortfolio from "../../assets/myfoto.png";
 import css from "./Hero.module.scss";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="hero" className={css.hero}>
       <div className={css.heroWrapperText}>
-        <p className={css.heroText}>Hello I`m</p>
-        <h2 className={css.heroSubtitle}>Troyan Katerina</h2>
-        <h1 className={css.heroTitle}>Front-end Developer</h1>
+        <p className={css.heroText}>{t("hero_hello")}</p>
+        <h2 className={css.heroSubtitle}>{t("hero_name")}</h2>
+        <h1 className={css.heroTitle}>{t("hero_title")}</h1>
         <div className={css.socialLinks}>
           <a
             className={css.socialLinksItem}
@@ -36,14 +39,16 @@ const Hero = () => {
           </a>
         </div>
         <div className={css.description}>
-          <a href="#contact" className={`${css.button} ${css.baseBtn}`}>Hire Me</a>
+          <a href="#contact" className={`${css.button} ${css.baseBtn}`}>
+            {t("hero_hire")}
+          </a>
           <a
             className={`${css.cv} ${css.baseBtn}`}
             href="https://drive.google.com/file/d/1QGVp3iAFxVCqPWwWC02b-9_kNRNPjUFR/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Download CV
+            {t("hero_cv")}
           </a>
         </div>
       </div>
@@ -61,4 +66,5 @@ const Hero = () => {
     </section>
   );
 };
+
 export default Hero;

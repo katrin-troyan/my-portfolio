@@ -1,8 +1,11 @@
 import Logo from "../../assets/logon.png";
 import { FaLinkedin, FaGithub, FaTelegramPlane } from "react-icons/fa";
 import css from "./Footer.module.scss";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className={css.footer}>
       <div className={css.footerContent}>
@@ -46,16 +49,16 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
         <div className={css.footerContacts}>
-          <p className={css.footerContactEmail}>katerynatroyan.dev@gmail.com</p>
-          <p className={css.footerContactPhone}>+38 067 416 64 63</p>
+          <p className={css.footerContactEmail}>{t("footer_email")}</p>
+          <p className={css.footerContactPhone}>{t("footer_phone")}</p>
         </div>
 
-        <p className={css.footerText}>
-          © 2025 My Portfolio. All rights reserved.
-        </p>
+        <p className={css.footerText}>{t("footer_rights")}</p>
       </div>
     </footer>
   );
 };
+
 export default Footer;

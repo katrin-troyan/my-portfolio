@@ -1,0 +1,89 @@
+{
+  "nav_home": "Home",
+  "nav_about": "About me",
+  "nav_benefits": "Benefits",
+  "nav_projects": "Projects",
+  "nav_contact": "Contact me",
+  "hero_hello": "Hello I’m",
+  "hero_name": "Troyan Katerina",
+  "hero_title": "Front-end Developer",
+  "hero_hire": "Hire Me",
+  "hero_cv": "Download CV",
+   "quote_text": "FROM IDEA TO INTERACTIVE INTERFACE – WITH INSPIRATION AND CARE.",
+   "about_title": "About Me",
+  "about_items": [
+    {
+      "title": "About Me",
+      "content": "I'm Kateryna Troyan, and I'm passionate about creating fast, responsive, and user-friendly web applications. I work with HTML, CSS, JavaScript, React, specialising in developing interactive and visually appealing interfaces that improve user experience and help achieve business goals. I always adhere to the principles of clean code, attention to detail, and result orientation. I help companies strengthen their online reputation with high-quality, user-friendly, and technologically advanced web solutions."
+    },
+    {
+      "title": "Soft Skills",
+      "content": "Teamwork<br/>Communicative<br/>Meeting deadlines<br/>Responsibility"
+    },
+    {
+      "title": "Goals",
+      "content": "Develop as a Frontend developer<br/>Participate in cool projects<br/>Create user-friendly interfaces for people"
+    },
+    {
+      "title": "Education",
+      "content": "2024-2025 IT School GoIT<br/>Fullstack Developer<br/>2002-2007 National University of Life and Environmental Sciences of Ukraine, Master's degree"
+    }
+  ],
+  "about_cv": "Download CV",
+  "benefits_title": "Benefits of working with me",
+  "benefits_items": [
+    {
+      "title": "Focus on results and effective cooperation",
+      "text": "My goal is not just to create an interface, but to help your business work more efficiently. The result for me is not just code, but real value for you and your customers."
+    },
+    {
+      "title": "Responsibility and communication",
+      "text": "I am attentive to tasks, meet deadlines, and am open to constructive criticism. It is important to me that the result meets your expectations."
+    },
+    {
+      "title": "Fast and diligent execution",
+      "text": "I understand the value of time. I do my work conscientiously, with a focus on quality and detail, even under tight deadlines."
+    }
+  ],
+  "projects_title": "Projects",
+  "projects_list": [
+    {
+      "title": "Simply Chocolate",
+      "description": "A website for a premium chocolate brand using modern responsive layout, semantic HTML structure, interactive effects and smooth animation. Optimized for tablets and mobile devices."
+    },
+    {
+      "title": "KinoClick",
+      "description": "A web application in React.js with API integration for searching movies. Displays posters, titles, and short descriptions."
+    },
+    {
+      "title": "Wacky Battles",
+      "description": "A landing page for the Wacky Battles game by Evoplay. Includes adaptive and visually appealing sections like Hero, About, Game Features."
+    },
+    {
+      "title": "Happy Cake",
+      "description": "A fully responsive site for a cake company using HTML and CSS. Includes hover effects, animations, and modal window. Follows mobile-first principles."
+    },
+    {
+      "title": "Seek and you shall find",
+      "description": "A React web app using a public API to search images by keywords. Includes interactive elements and responsive design."
+    },
+    {
+      "title": "Phonebook",
+      "description": "A React application with auth, contact storage on the server, search, deletion, and form validation."
+    }
+  ],
+  "projects_github": "GitHub",
+  "projects_view": "View",
+  "contact_title": "Let’s work together",
+  "contact_name": "Name",
+  "contact_email": "Email",
+  "contact_message": "Comments",
+  "contact_send": "Send",
+  "modal_title": "Thank you for your interest in cooperation!",
+  "modal_text": "I will be in touch with you shortly to discuss further details and opportunities for cooperation. Please stay in touch.",
+  "modal_close": "Close",
+    "footer_email": "katerynatroyan.dev@gmail.com",
+  "footer_phone": "+38 067 416 64 63",
+  "footer_rights": "© 2025 My Portfolio. All rights reserved."
+}
+
